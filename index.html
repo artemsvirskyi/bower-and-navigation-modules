@@ -7,15 +7,147 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="components/shower-ribbon/styles/screen.css">
 	<style>
-
+		.xxl,
+		.xxl h2{
+			font-size: 180%;
+		}
+		.slide .no-numeration code::before{
+			content: none;
+		}
+		.less-lh code{
+			line-height: 1.9 !important;
+		}
 	</style>
 </head>
-<body class="list">
+<body class="list" lang="ru">
 	<header class="caption">
 		<h1>Bower. Стандартные модули навигации.</h1>
 	</header>
-	<article class="slide shout" id="frontpage"><div>
+	<article class="slide" id="frontpage"><div>
 		<h2>Bower</h2>
+		<img src="images/bower-logo.png">
+		<style>
+			#frontpage h2{
+				position: absolute;
+				bottom: 180px;
+				right: 42px;
+				font-size: 170px;
+				color: #de4420;
+			}
+			#frontpage img{
+				position: absolute;
+				left: 50px;
+				top: 100px;
+				width: 50%;
+			}
+			#frontpage:after{
+				opacity: 0;
+			}
+		</style>
+	</div></article>
+	<article class="slide xxl" id="bower_fp"><div>
+		<h2>Bower</h2>
+		<p>Пакетный менеджер для веба.</p>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Добавим jQuery без bower</h2>
+		<ol>
+			<li>Заходим на сайт jQuery</li>
+			<li>Скачиваем jQuery</li>
+			<li>Добавляем jQuery в проект</li>
+		</ol>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Добавим jQuery с bower</h2>
+		<p>
+			<code>$ bower install jquery</code>
+		</p>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Установка</h2>
+		<p>Для работы нужны <mark>Node и npm</mark> и <mark>Git</mark></p>
+		<p>
+			<code>$ npm install -g bower</code>
+		</p>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Папка bower_components</h2>
+		<p>
+			<code>$ bower install jquery</code>
+		</p>
+		<pre class="no-numeration less-lh">
+			<code>project</code>
+			<code>|_bower_components</code>
+			<code>	|_jquery</code>
+			<code>		|_dist</code>
+			<code>		|_src</code>
+			<code>		|_...</code>
+		</pre>
+	</div></article>
+	<article class="slide"><div>
+		<h2>main</h2>
+			<code>$ bower list --paths</code>
+		<pre class="no-numeration">
+			<code><mark class="comment">// jquery: 'bower_components/jquery/dist/jquery.js'</mark></code>
+		</pre>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Компоненты можно коммитить</h2>
+		<p>
+			<code>$ bower install jquery normalize-css ...</code>
+		</p>
+		<pre class="no-numeration less-lh">
+			<code>project</code>
+			<code>|_bower_components</code>
+			<code>	|_jquery/</code>
+			<code>	|_normalize-css/</code>
+			<code>	|_...</code>
+			<code>	|_...</code>
+			<code>	|_...</code>
+		</pre>
+	</div></article>
+	<article class="slide" id="noCommit"><div>
+		<h2>А можно не коммитить</h2>
+		<p><mark>bower.json</mark></p>
+		<pre>
+			<code>"dependencies": {</code>
+			<code>  "name": "version",</code>
+			<code>  "name": "version"</code>
+			<code>}</code>
+		</pre>
+		<p><code>bower install</code></p>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Создаем bower.json</h2>
+		<p>
+			<code>$ bower init</code>
+		</p>
+	</div></article>
+	<article class="slide"><div>
+		<h2>--save</h2>
+		<p>
+			<code>$ bower install <mark>--save</mark> jquery normalize-css ...</code>
+		</p>
+		bower.json
+		<pre>
+			<code>"dependencies": {</code>
+			<code>  "jquery": "~2.1.1",</code>
+			<code>  "normalize-css": "~3.0.2"</code>
+			<code>}</code>
+		</pre>
+	</div></article>
+	<article class="slide"><div>
+		<h2>.bowerrc</h2>
+		<p>Файл с настройками bower</p>
+		<pre>
+			<code>{</code>
+			<code>	"directory": "components"</code>
+			<code>}</code>
+		</pre>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Отличие от npm</h2>
+
 	</div></article>
 	<div class="progress"><div></div></div>
 	<script src="components/shower-core/shower.min.js"></script>

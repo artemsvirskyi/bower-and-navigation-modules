@@ -17,6 +17,9 @@
 		.less-lh code{
 			line-height: 1.9 !important;
 		}
+		.less-lh-even-more code{
+			line-height: 1.5 !important;
+		}
 	</style>
 </head>
 <body class="list" lang="ru">
@@ -125,9 +128,9 @@
 	</div></article>
 	<article class="slide"><div>
 		<h2>--save</h2>
-		<p>
+		<pre>
 			<code>$ bower install <mark>--save</mark> jquery normalize-css ...</code>
-		</p>
+		</pre>
 		bower.json
 		<pre>
 			<code>"dependencies": {</code>
@@ -145,35 +148,37 @@
 
 		<p>A > C</p>
 		<p>B > C</p>
-
 		<p><code>npm install</code></p>
-
-		<pre class="no-numeration">
+		<pre class="no-numeration less-lh-even-more">
 			<code>node_modules</code>
 			<code>|_A</code>
 			<code>| |_C</code>
 			<code>|_B</code>
 			<code>  |_C</code>
 		</pre>
-
 		<style>
 			#npmExample p{
 				margin-bottom: 10px;
 			}
 		</style>
 	</div></article>
-	<article class="slide"><div>
+	<article class="slide" id="bowerExample"><div>
 		<h2>Пример bower</h2>
 
-		A > C
-		B > C
-
-		bower install
-
-		bower_components
-		|_A
-		|_B
-		|_C
+		<p>A > C</p>
+		<p>B > C</p>
+		<p><code>bower install</code></p>
+		<pre class="no-numeration less-lh-even-more">
+			<code>bower_components</code>
+			<code>|_A</code>
+			<code>|_B</code>
+			<code>|_C</code>
+		</pre>
+		<style>
+			#bowerExample p{
+				margin-bottom: 10px;
+			}
+		</style>
 	</div></article>
 	<article class="slide"><div>
 		<h2>.bowerrc</h2>

@@ -137,6 +137,45 @@
 		</pre>
 	</div></article>
 	<article class="slide"><div>
+		<h2>Отличие от npm</h2>
+		<p>У npm древовидная структура зависимостей</p>
+	</div></article>
+	<article class="slide" id="npmExample"><div>
+		<h2>Пример npm</h2>
+
+		<p>A > C</p>
+		<p>B > C</p>
+
+		<p><code>npm install</code></p>
+
+		<pre class="no-numeration">
+			<code>node_modules</code>
+			<code>|_A</code>
+			<code>| |_C</code>
+			<code>|_B</code>
+			<code>  |_C</code>
+		</pre>
+
+		<style>
+			#npmExample p{
+				margin-bottom: 10px;
+			}
+		</style>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Пример bower</h2>
+
+		A > C
+		B > C
+
+		bower install
+
+		bower_components
+		|_A
+		|_B
+		|_C
+	</div></article>
+	<article class="slide"><div>
 		<h2>.bowerrc</h2>
 		<p>Файл с настройками bower</p>
 		<pre>
@@ -144,10 +183,6 @@
 			<code>	"directory": "components"</code>
 			<code>}</code>
 		</pre>
-	</div></article>
-	<article class="slide"><div>
-		<h2>Отличие от npm</h2>
-
 	</div></article>
 	<div class="progress"><div></div></div>
 	<script src="components/shower-core/shower.min.js"></script>

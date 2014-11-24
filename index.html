@@ -20,6 +20,9 @@
 		.less-lh-even-more code{
 			line-height: 1.5 !important;
 		}
+		.centered{
+			text-align: center;
+		}
 	</style>
 </head>
 <body class="list" lang="ru">
@@ -95,6 +98,15 @@
 		</pre>
 	</div></article>
 	<article class="slide"><div>
+		<h2>.bowerrc</h2>
+		<p>Файл с настройками bower</p>
+		<pre>
+			<code>{</code>
+			<code>	"directory": "components"</code>
+			<code>}</code>
+		</pre>
+	</div></article>
+	<article class="slide"><div>
 		<h2>Компоненты можно коммитить</h2>
 		<p>
 			<code>$ bower install jquery normalize-css ...</code>
@@ -139,55 +151,74 @@
 			<code>}</code>
 		</pre>
 	</div></article>
-	<article class="slide"><div>
+	<article class="slide" id="npmDistinctions"><div>
 		<h2>Отличие от npm</h2>
+
 		<p>У npm древовидная структура зависимостей</p>
-	</div></article>
-	<article class="slide" id="npmExample"><div>
-		<h2>Пример npm</h2>
 
-		<p>A > C</p>
-		<p>B > C</p>
-		<p><code>npm install</code></p>
-		<pre class="no-numeration less-lh-even-more">
-			<code>node_modules</code>
-			<code>|_A</code>
-			<code>| |_C</code>
-			<code>|_B</code>
-			<code>  |_C</code>
-		</pre>
+		<p class="example">A > C</p>
+		<p class="example">B > C</p>
+
+		<div class="column-wrapper">
+			<div class="column">
+				<p><code>npm install</code></p>
+				<pre class="no-numeration less-lh-even-more">
+					<code>node_modules</code>
+					<code>|_A</code>
+					<code>| |_C</code>
+					<code>|_B</code>
+					<code>  |_C</code>
+				</pre>
+			</div>
+			<div class="column">
+				<p><code>bower install</code></p>
+				<pre class="no-numeration less-lh-even-more">
+					<code>bower_components</code>
+					<code>|_A</code>
+					<code>|_B</code>
+					<code>|_C</code>
+				</pre>
+			</div>
+		</div>
+
 		<style>
-			#npmExample p{
-				margin-bottom: 10px;
+			#npmDistinctions .example{
+				margin-left: 265px;
 			}
-		</style>
-	</div></article>
-	<article class="slide" id="bowerExample"><div>
-		<h2>Пример bower</h2>
-
-		<p>A > C</p>
-		<p>B > C</p>
-		<p><code>bower install</code></p>
-		<pre class="no-numeration less-lh-even-more">
-			<code>bower_components</code>
-			<code>|_A</code>
-			<code>|_B</code>
-			<code>|_C</code>
-		</pre>
-		<style>
-			#bowerExample p{
-				margin-bottom: 10px;
+			#npmDistinctions p{
+				margin-bottom: 5px;
+			}
+			#npmDistinctions .column-wrapper{
+				display: -webkit-box;
+				/*-webkit-box-pack: center;*/
+			}
+			#npmDistinctions .column{
+				/*margin: 0 100px;*/
+				width: 50%;
 			}
 		</style>
 	</div></article>
 	<article class="slide"><div>
+		<h2>bower install endpoints</h2>
+		<p><code>bower install jquery</code></p>
+		<p><code>bower install git@github.com:user/package.git</code></p>
+		<p><code>bower install user/package</code></p>
+	</div></article>
+	<article class="slide" id="resolver"><div>
 		<h2>.bowerrc</h2>
-		<p>Файл с настройками bower</p>
 		<pre>
 			<code>{</code>
-			<code>	"directory": "components"</code>
+			<code>	"shorthand-resolver":
+		"git@git.qapint.com:{{owner}}/{{package}}.git"</code>
 			<code>}</code>
 		</pre>
+		<p><code>bower install cobalt/slider</code></p>
+		<p><code>git@git.qapint.com:cobalt/slider.git</code></p>
+		<style>
+			#resolver p{
+				margin-bottom: 10px;
+			}
+		</style>
 	</div></article>
 	<div class="progress"><div></div></div>
 	<script src="components/shower-core/shower.min.js"></script>

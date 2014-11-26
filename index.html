@@ -220,6 +220,119 @@
 			}
 		</style>
 	</div></article>
+	<article class="slide" id="navTitle"><div>
+		<h2>Стандартные модули навигации</h2>
+		<img src="images/stolb.jpg">
+		<style>
+			#navTitle h2{
+				font-size: 92px;
+				color: #D31212;
+				margin: 64px 0 0 380px;
+				text-align: center;
+			}
+			#navTitle img{
+				position: absolute;
+				height: 600px;
+				top: 30px;
+				left: 0;
+			}
+			#navTitle:after{
+				opacity: 0;
+			}
+		</style>
+	</div></article>
+	<article class="slide" id="structure"><div>
+		<h2>Структура презентаций</h2>
+		<h3>Chapter1</h3>
+		<div class="chapter">
+			<div>Slide1</div>
+			<div>Slide2</div>
+			<div>Slide3</div>
+		</div>
+		<h3>Chapter2</h3>
+		<div class="chapter">
+			<div>Slide4</div>
+			<div>Slide5</div>
+			<div>Slide6</div>
+		</div>
+
+		<style>
+			#structure h2{
+				margin-bottom: 20px;
+			}
+			#structure h3{
+				font-size: 36px;
+			}
+			#structure .chapter{
+				display: -webkit-box;
+				margin-left: 40px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			#structure .chapter div{
+				display: -webkit-box;
+				-webkit-box-align: center;
+				-webkit-box-pack: center;
+				width: 120px;
+				height: 120px;
+				border: 1px solid black;
+				margin: 0 20px;
+			}
+		</style>
+	</div></article>
+	<article class="slide" id="structureJSON"><div>
+		<h2>structure.json</h2>
+		<pre class="no-numeration">
+			<code>slides</code>
+			<code>	slide1</code>
+			<code>	slide2</code>
+			<code>	slide3</code>
+			<code>	slide4</code>
+			<code>chapters</code>
+			<code>	chapter1</code>
+			<code>		slide1</code>
+			<code>		slide2</code>
+			<code>	chapter2</code>
+			<code>		slide3</code>
+			<code>		slide4</code>
+			<code>storyboard</code>
+			<code>	chapter1</code>
+			<code>	chapter2</code>
+		</pre>
+		<style>
+			#structureJSON h2{
+				margin-bottom: 20px;
+			}
+			#structureJSON code{
+				line-height: 1.18;
+			}
+		</style>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Модули</h2>
+		<ul>
+			<li>Menu</li>
+			<li>Thumbnails</li>
+			<li>Sitemap</li>
+			<li>Indicators</li>
+		</ul>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Menu</h2>
+		<p>Навигация по чаптерам.</p>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Thumbnails</h2>
+		<p>Навигация по слайдам чаптера.</p>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Sitemap</h2>
+		<p>Навигация по всем слайдам презентации.</p>
+	</div></article>
+	<article class="slide"><div>
+		<h2>Indicators</h2>
+		<p>Модуль для ориентации в чаптере.</p>
+	</div></article>
 	<div class="progress"><div></div></div>
 	<script src="components/shower-core/shower.min.js"></script>
 	<!-- Copyright © 2013 Yours Truly, Famous Inc. -->

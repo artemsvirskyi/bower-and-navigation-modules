@@ -226,7 +226,7 @@
 		<style>
 			#navTitle h2{
 				font-size: 92px;
-				color: #D31212;
+				color: #0686B8;
 				margin: 64px 0 0 380px;
 				text-align: center;
 			}
@@ -309,6 +309,20 @@
 		</style>
 	</div></article>
 	<article class="slide"><div>
+		<h2>nav.goto</h2>
+		<p>Метод модуля nav для перехода на слайд</p>
+		<pre>
+			<code>var nav = require(<mark>'nav'</mark>);</code>
+			<code>nav.<mark class="important">goto</mark>({<mark>chapter</mark>: 'chapterId', <mark>slide</mark>: 'slideId'});</code>
+			<code><mark class="comment">// nav.goto({chapter: 'chapter2', slide: 'slide4'});</mark></code>
+		</pre>
+		<pre class="no-numeration less-lh-even-more">
+			<code>chapter и slide</code>
+			<code>chapter</code>
+			<code>slide</code>
+		</pre>
+	</div></article>
+	<article class="slide"><div>
 		<h2>Модули</h2>
 		<ul>
 			<li>Menu</li>
@@ -317,9 +331,66 @@
 			<li>Indicators</li>
 		</ul>
 	</div></article>
-	<article class="slide"><div>
+	<article class="slide" id="menu"><div>
 		<h2>Menu</h2>
 		<p>Навигация по чаптерам.</p>
+		<pre class="story">
+			<code>storyboard</code>
+			<code>	chapter1</code>
+			<code>	chapter2</code>
+		</pre>
+
+		<nav>
+			<a>chapter1</a>
+			<a>chapter2</a>
+		</nav>
+
+		<pre class="no-numeration goto">
+			<code>nav.goto({chapter: 'chapter1'});</code>
+			<code>nav.goto({chapter: 'chapter2'});</code>
+		</pre>
+
+
+		<style>
+			#menu p{
+				margin-bottom: 10px;
+			}
+			#menu .story{
+				position: relative;
+				float: left;
+			}
+			#menu .story:after{
+				content: "";
+				position: absolute;
+				left: 100%;
+				top: 49px;
+				margin-left: 49px;
+				width: 80px;
+				height: 70px;
+				background: url('images/arrow.png');
+				background-size: 100% 100%;
+			}
+			#menu nav{
+				float: left;
+				margin-top: 60px;
+				margin-left: 270px;
+				display: -webkit-box;
+				-webkit-transform: scale(2);
+			}
+			#menu nav a{
+				font-size: 14px;
+				padding: 10px 15px;
+				line-height: 20px;
+				color: #999;
+				background: #222;
+				display: block;
+				cursor: pointer;
+			}
+			#menu .goto{
+				clear: both;
+				text-align: center;
+			}
+		</style>
 	</div></article>
 	<article class="slide"><div>
 		<h2>Thumbnails</h2>

@@ -392,13 +392,87 @@
 			}
 		</style>
 	</div></article>
-	<article class="slide"><div>
+	<article class="slide" id="thumbs"><div>
 		<h2>Thumbnails</h2>
 		<p>Навигация по слайдам чаптера.</p>
+
+		<pre class="story">
+			<code>chapter</code>
+			<code>	slide1</code>
+			<code>	slide2</code>
+			<code>	slide3</code>
+		</pre>
+
+
+		<div class="thumbs">
+			<div>slide1</div>
+			<div>slide2</div>
+			<div>slide3</div>
+		</div>
+
+			<code class="path">media/images/common/thumbs/%slideId%.jpg</code>
+
+		<style>
+			#thumbs p{
+				margin-bottom: 10px;
+			}
+			#thumbs .story{
+				position: relative;
+				float: left;
+			}
+			#thumbs .story:after{
+				content: "";
+				position: absolute;
+				left: 100%;
+				top: 90px;
+				margin-left: 49px;
+				width: 80px;
+				height: 70px;
+				background: url('images/arrow.png');
+				background-size: 100% 100%;
+			}
+			#thumbs .thumbs{
+				float: left;
+				margin-top: 75px;
+				margin-left: 200px;
+				display: -webkit-box;
+				/*-webkit-transform: scale(2);*/
+			}
+			#thumbs .thumbs div{
+				display: -webkit-box;
+				-webkit-box-align: center;
+				-webkit-box-pack: center;
+				border: 1px solid black;
+				width: 100px;
+				height: 100px;
+				margin: 0 10px;
+			}
+			#thumbs .path{
+				clear: both;
+				float: left;
+			}
+		</style>
 	</div></article>
 	<article class="slide"><div>
 		<h2>Sitemap</h2>
 		<p>Навигация по всем слайдам презентации.</p>
+		<pre class="no-numeration">
+			<code>slides</code>
+			<code>	slide1</code>
+			<code>	slide2</code>
+			<code>	slide3</code>
+			<code>	slide4</code>
+			<code>chapters</code>
+			<code>	chapter1</code>
+			<code>		slide1</code>
+			<code>		slide2</code>
+			<code>	chapter2</code>
+			<code>		slide3</code>
+			<code>		slide4</code>
+			<code>storyboard</code>
+			<code>	chapter1</code>
+			<code>	chapter2</code>
+		</pre>
 	</div></article>
 	<article class="slide"><div>
 		<h2>Indicators</h2>

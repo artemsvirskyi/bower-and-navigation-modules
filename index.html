@@ -524,19 +524,75 @@
 			}
 		</style>
 	</div></article>
-	<article class="slide"><div>
+	<article class="slide" id="indicators"><div>
 		<h2>Indicators</h2>
 		<p>Модуль для ориентации в чаптере.</p>
+
+		<pre class="story">
+			<code>chapter</code>
+			<code>	slide1</code>
+			<code>	slide2 (текущий)</code>
+			<code>	slide3</code>
+		</pre>
+
+
+		<div class="thumbs">
+			<div></div>
+			<div class="active"></div>
+			<div></div>
+		</div>
+
+		<style>
+			#indicators p{
+				margin-bottom: 10px;
+			}
+			#indicators .story{
+				position: relative;
+				float: left;
+			}
+			#indicators .story:after{
+				content: "";
+				position: absolute;
+				left: 100%;
+				top: 90px;
+				margin-left: 49px;
+				width: 80px;
+				height: 70px;
+				background: url('images/arrow.png');
+				background-size: 100% 100%;
+			}
+			#indicators .thumbs{
+				float: left;
+				margin-top: 111px;
+				margin-left: 230px;
+				display: -webkit-box;
+				-webkit-transform: scale(2);
+			}
+			#indicators .thumbs div{
+				width: 10px;
+				height: 10px;
+				margin: 5px;
+				background-color: #ccc;
+				border-radius: 50%;
+			}
+			#indicators .thumbs .active{
+				background: #888;
+			}
+			#indicators .path{
+				clear: both;
+				float: left;
+			}
+		</style>
 	</div></article>
 	<article class="slide"><div>
 		<h2>Установка</h2>
 		<code>$ bower install cobalt/название компонента --save</code><br>
 	</div></article>
-	<article class="slide" id=""><div>
+	<article class="slide"><div>
 		<h2>Подключение</h2>
 		<p>app.json</p>
 		<pre>
-			<code><mark>"modules": ["sitemap"]</mark></code>
+			<code><mark>"modules": ["name"]</mark></code>
 		</pre>
 		<p>slide.html</p>
 		<pre>
